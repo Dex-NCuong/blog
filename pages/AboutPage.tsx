@@ -99,12 +99,12 @@ const AboutPage: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {[
             {
-              name: "JavaScript",
+              name: "JavaScript (ES6+)",
               color:
                 "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
             },
             {
-              name: "React",
+              name: "ReactJS",
               color:
                 "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
             },
@@ -114,14 +114,39 @@ const AboutPage: React.FC = () => {
                 "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
             },
             {
+              name: "Tailwind CSS",
+              color:
+                "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300",
+            },
+            {
+              name: "Bootstrap",
+              color:
+                "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
+            },
+            {
               name: "Node.js",
               color:
                 "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
             },
             {
+              name: "FastAPI",
+              color:
+                "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300",
+            },
+            {
+              name: "REST API",
+              color:
+                "bg-slate-100 text-slate-800 dark:bg-slate-900/30 dark:text-slate-300",
+            },
+            {
               name: "MongoDB",
               color:
                 "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300",
+            },
+            {
+              name: "MySQL",
+              color:
+                "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
             },
             {
               name: "Python",
@@ -142,6 +167,41 @@ const AboutPage: React.FC = () => {
               name: "Unreal Engine 5",
               color:
                 "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300",
+            },
+            {
+              name: "Docker",
+              color:
+                "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+            },
+            {
+              name: "Git / GitHub",
+              color:
+                "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
+            },
+            {
+              name: "Postman",
+              color:
+                "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
+            },
+            {
+              name: "Figma",
+              color:
+                "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300",
+            },
+            {
+              name: "RAG",
+              color:
+                "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
+            },
+            {
+              name: "FAISS",
+              color:
+                "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300",
+            },
+            {
+              name: "LLM API Integration",
+              color:
+                "bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300",
             },
           ].map((skill, index) => (
             <div
@@ -344,7 +404,7 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="/Dao-Nhat-Cuong-full stack.pdf"
+                href="/CV_DaoNhatCuong_Backend.pdf"
                 download
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg"
               >
@@ -364,7 +424,7 @@ const AboutPage: React.FC = () => {
                 Tải xuống
               </a>
               <a
-                href="/Dao-Nhat-Cuong-full stack.pdf"
+                href="/CV_DaoNhatCuong_Backend.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 font-semibold border-2 border-primary-600 dark:border-primary-400 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors"
