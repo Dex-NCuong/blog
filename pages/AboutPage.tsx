@@ -404,7 +404,7 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="/CV_DaoNhatCuong_Backend.pdf"
+                href="/CV_DaoNhatCuong_BackEnd.pdf"
                 download
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg"
               >
@@ -424,7 +424,7 @@ const AboutPage: React.FC = () => {
                 Tải xuống
               </a>
               <a
-                href="/CV_DaoNhatCuong_Backend.pdf"
+                href="/CV_DaoNhatCuong_BackEnd.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 font-semibold border-2 border-primary-600 dark:border-primary-400 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors"

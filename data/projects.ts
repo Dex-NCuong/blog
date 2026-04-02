@@ -16,58 +16,62 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "studyqna",
-    name: "Studyqna",
-    shortDesc: "Hệ thống hỏi đáp học tập trực tuyến",
+    name: "AI Study Q&A Platform (StudyQnA)",
+    shortDesc: "Hệ thống hỏi đáp học tập sử dụng AI (RAG)",
     fullDesc: `
-      <p>Studyqna là một nền tảng trực tuyến được thiết kế để hỗ trợ học sinh và sinh viên trong việc trao đổi kiến thức và giải đáp thắc mắc. Dự án tập trung vào việc xây dựng một cộng đồng học tập tích cực, nơi mọi người có thể đặt câu hỏi và nhận được câu trả lời từ các thành viên khác hoặc các chuyên gia.</p>
+      <p>StudyQnA là một nền tảng hỗ trợ học tập thông minh, tích hợp AI để giúp sinh viên tương tác với tài liệu cá nhân, tạo quiz tự động và giải đáp thắc mắc. Hệ thống sử dụng kiến trúc RAG để tối ưu việc tìm kiếm và truy xuất thông tin từ tài liệu.</p>
       <h3 class="text-xl font-bold mt-4 mb-2">Tính năng chính:</h3>
       <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-        <li>Đăng ký, đăng nhập thành viên.</li>
-        <li>Đặt câu hỏi theo chủ đề/môn học.</li>
-        <li>Bình luận và trả lời câu hỏi.</li>
-        <li>Hệ thống vote câu trả lời hay nhất.</li>
-        <li>Tìm kiếm câu hỏi.</li>
+        <li>Upload và parsing tài liệu (vector embedding, semantic search).</li>
+        <li>Tích hợp AI chat với LLM (Gemini/OpenAI) để hỏi đáp.</li>
+        <li>Tạo quiz tự động từ tài liệu học tập.</li>
+        <li>Quản lý lịch sử truy vấn và lưu trữ câu hỏi.</li>
+        <li>Xác thực bảo mật với JWT và mã hóa token bằng Fernet.</li>
       </ul>
       <h3 class="text-xl font-bold mt-4 mb-2">Vai trò & Đóng góp:</h3>
-      <p>Là <strong>Fullstack Developer</strong> chính của dự án, tôi đảm nhiệm:</p>
+      <p>Là <strong>Team Leader / Fullstack Developer</strong> (nhóm 3 thành viên), tôi đảm nhiệm:</p>
       <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-        <li>Thiết kế cơ sở dữ liệu và kiến trúc hệ thống.</li>
-        <li>Phát triển toàn bộ Frontend (React) và Backend (Node.js).</li>
-        <li>Triển khai và tối ưu hóa hiệu năng ứng dụng.</li>
+        <li>Thiết kế kiến trúc hệ thống và xây dựng luồng xử lý RAG kết hợp FAISS.</li>
+        <li>Phát triển Frontend bằng React, Vite, Tailwind CSS.</li>
+        <li>Phát triển Backend API với FastAPI, quản lý database MongoDB.</li>
       </ul>`,
-    techStack: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+    techStack: ["React", "Tailwind CSS", "FastAPI", "MongoDB", "FAISS", "RAG", "LLM API", "JWT"],
     links: [
       {
         label: "Xem mã nguồn",
         url: "https://github.com/Dex-NCuong/DoAnChuyenNganh",
         type: "github",
       },
+      {
+        label: "Xem demo",
+        url: "https://studyqna.vercel.app/",
+        type: "demo",
+      }
     ],
     date: "2025",
     color: "bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400",
   },
   {
     id: "web-doc-truyen",
-    name: "Web Đọc Truyện",
+    name: "Web Đọc Truyện Chữ",
     shortDesc: "Nền tảng đọc truyện trực tuyến",
     fullDesc: `
-      <p>Website đọc truyện online với giao diện thân thiện, cho phép người dùng đọc và quản lý truyện yêu thích một cách dễ dàng.</p>
+      <p>Website đọc truyện online mang lại trải nghiệm mượt mà trên nhiều thiết bị. Dự án cung cấp kho truyện với các chức năng tối ưu cho người đọc.</p>
       <h3 class="text-xl font-bold mt-4 mb-2">Tính năng:</h3>
       <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
         <li>Đọc truyện theo chương.</li>
-        <li>Tìm kiếm và lọc truyện theo thể loại.</li>
-        <li>Đánh dấu truyện yêu thích.</li>
+        <li>Tìm kiếm và lọc truyện.</li>
         <li>Quản lý và cập nhật nội dung truyện.</li>
       </ul>
       <h3 class="text-xl font-bold mt-4 mb-2">Vai trò & Đóng góp:</h3>
-      <p>Là <strong>Fullstack Developer</strong>, tôi chịu trách nhiệm:</p>
+      <p>Là <strong>Team Leader / Fullstack Developer</strong> (nhóm 3 thành viên), tôi chịu trách nhiệm:</p>
       <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-        <li>Xây dựng giao diện người dùng với HTML/CSS/JavaScript.</li>
-        <li>Phát triển Backend với PHP và quản lý database.</li>
-        <li>Tối ưu trải nghiệm đọc truyện trên nhiều thiết bị.</li>
+        <li>Xây dựng giao diện frontend với HTML, CSS và JavaScript.</li>
+        <li>Phát triển backend quản lý truyện và dữ liệu bằng Node.js.</li>
+        <li>Thiết kế và truy vấn cơ sở dữ liệu MySQL.</li>
       </ul>
     `,
-    techStack: ["HTML", "CSS", "JavaScript", "PHP"],
+    techStack: ["HTML", "CSS", "JavaScript", "Node.js", "MySQL"],
     links: [
       {
         label: "Xem mã nguồn",
