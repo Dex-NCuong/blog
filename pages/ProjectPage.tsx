@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import usePageTitle from "../hooks/usePageTitle";
@@ -6,6 +6,7 @@ import usePageTitle from "../hooks/usePageTitle";
 const ProjectPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id);
+  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
 
   usePageTitle(project ? `${project.name} | Nhật Cường Dev` : "Dự án");
 
@@ -95,6 +96,30 @@ const ProjectPage: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: project.fullDesc }}
       />
 
+      {/* Project Images Gallery */}
+      {project.images && project.images.length > 0 && (
+        <div className="mt-8" data-aos="fade-up" data-aos-delay="150">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Ảnh dự án
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {project.images.map((img, idx) => (
+              <button
+                key={idx}
+                onClick={() => setLightboxImg(img)}
+                className="group overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl transition-all duration-300 focus:outline-none"
+              >
+                <img
+                  src={img}
+                  alt={`${project.name} screenshot ${idx + 1}`}
+                  className="w-full h-52 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Project Links */}
       {project.links.length > 0 && (
         <div className="mt-8" data-aos="fade-up" data-aos-delay="200">
@@ -149,8 +174,37 @@ const ProjectPage: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Lightbox */}
+      {lightboxImg && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={() => setLightboxImg(null)}
+        >
+          <div
+            className="relative max-w-5xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setLightboxImg(null)}
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+              aria-label="Đóng"
+            >
+              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img
+              src={lightboxImg}
+              alt="Preview"
+              className="w-full rounded-xl shadow-2xl object-contain max-h-[80vh]"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default ProjectPage;
+
